@@ -1,0 +1,31 @@
+using Apps.GlobalLinkAI.DataSourceHandlers;
+using Apps.GlobalLinkAI.DataSourceHandlers.StaticDataSourceHandlers;
+using Blackbird.Applications.Sdk.Common;
+using Blackbird.Applications.Sdk.Common.Dynamic;
+using Newtonsoft.Json;
+
+namespace Apps.GlobalLinkAI.Models.Request.Translation;
+
+public class TranslateTextRequest
+{
+    [Display("Target language")]
+    [JsonProperty("to")]
+    public string To { get; set; }
+    
+    [Display("Source language")]
+    [JsonProperty("from")]
+    public string? From { get; set; }
+
+    [Display("Text type")]
+    [JsonProperty("textType")]
+    [DataSource(typeof(TextTypeDataHandler))]
+    public string? TextType { get; set; }
+    
+    [JsonProperty("domain")]
+    public string? Domain { get; set; }
+    
+    [Display("Engine ID")]
+    [JsonProperty("engineId")]
+    [DataSource(typeof(EngineDataSourceHandler))]
+    public string? EngineId { get; set; }
+}

@@ -1,7 +1,8 @@
-﻿using Blackbird.Applications.Sdk.Common.Authentication;
+﻿using Apps.GlobalLinkAI.Constants;
+using Blackbird.Applications.Sdk.Common.Authentication;
 using Blackbird.Applications.Sdk.Common.Connections;
 
-namespace Apps.App.Connections;
+namespace Apps.GlobalLinkAI.Connections;
 
 public class ConnectionDefinition : IConnectionDefinition
 {
@@ -14,6 +15,8 @@ public class ConnectionDefinition : IConnectionDefinition
             ConnectionUsage = ConnectionUsage.Actions,
             ConnectionProperties = new List<ConnectionProperty>
             {
+                new(CredsNames.Host) { DisplayName = "Host" },
+                new(CredsNames.ApiKey) { DisplayName = "API key", Sensitive = true }
             }
         }
     };

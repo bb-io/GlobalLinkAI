@@ -1,7 +1,9 @@
-﻿using Blackbird.Applications.Sdk.Common.Authentication;
+﻿using Apps.GlobalLinkAI.Api;
+using Blackbird.Applications.Sdk.Common.Authentication;
 using Blackbird.Applications.Sdk.Common.Connections;
+using RestSharp;
 
-namespace Apps.App.Connections;
+namespace Apps.GlobalLinkAI.Connections;
 
 public class ConnectionValidator: IConnectionValidator
 {
@@ -9,6 +11,11 @@ public class ConnectionValidator: IConnectionValidator
         IEnumerable<AuthenticationCredentialsProvider> authenticationCredentialsProviders,
         CancellationToken cancellationToken)
     {
+        var creds = authenticationCredentialsProviders.ToArray();
+        
+        var request = new AppRequest("/apigateway/mtengine/organization/information/all", Method.Get, creds);
+        await new AppClient(creds).ExecuteWithErrorHandling(request);
+        
         return new()
         {
             IsValid = true
