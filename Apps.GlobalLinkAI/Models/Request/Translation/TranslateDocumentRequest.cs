@@ -9,10 +9,12 @@ public class TranslateDocumentRequest
 {
     [Display("Target language")]
     [JsonProperty("to")]
+    [DataSource(typeof(LanguageDataSourceHandler))]
     public string To { get; set; }
     
     [Display("Source language")]
     [JsonProperty("from")]
+    [DataSource(typeof(LanguageDataSourceHandler))]
     public string? From { get; set; }
     
     [Display("OCR")]
