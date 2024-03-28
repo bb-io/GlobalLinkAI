@@ -4,7 +4,7 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <Product>GlobalLink AI</Product>
+        <Product>GlobalLink Now</Product>
         <Description>AI-Powered Machine Translation</Description>
         <Version>1.0.0</Version>
         <AssemblyName>Apps.GlobalLinkAI</AssemblyName>

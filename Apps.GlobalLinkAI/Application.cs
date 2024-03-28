@@ -6,7 +6,7 @@ public class Application : IApplication
 {
     public string Name
     {
-        get => "GlobalLink AI";
+        get => "GlobalLink Now";
         set { }
     }
 
