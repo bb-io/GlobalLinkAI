@@ -3,7 +3,7 @@ using Blackbird.Applications.Sdk.Common.Metadata;
 
 namespace Apps.GlobalLinkAI;
 
-public class Application : IApplication
+public class Application : IApplication, ICategoryProvider
 {
     public IEnumerable<ApplicationCategory> Categories
     {
