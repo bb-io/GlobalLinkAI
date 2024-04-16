@@ -1,12 +1,19 @@
 ﻿using Blackbird.Applications.Sdk.Common;
+using Blackbird.Applications.Sdk.Common.Metadata;
 
 namespace Apps.GlobalLinkAI;
 
 public class Application : IApplication
 {
+    public IEnumerable<ApplicationCategory> Categories
+    {
+        get => [ApplicationCategory.MachineTranslationAndMtqe];
+        set { }
+    }
+    
     public string Name
     {
-        get => "GlobalLink AI";
+        get => "GlobalLink Now";
         set { }
     }
 
