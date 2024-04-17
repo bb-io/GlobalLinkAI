@@ -12,7 +12,7 @@ Blackbird is the new automation backbone for the language technology industry. B
 
 Before you can connect you need to make sure that:
 
-- You have a GlbalLink NOW instance.
+- You have a GlobalLink NOW instance.
 - You have HOST and Api key data for your GlobalLink NOW instance.
 
 ## Connecting
@@ -21,7 +21,7 @@ Before you can connect you need to make sure that:
 2. Click _Add Connection_.
 3. Name your connection for future reference e.g. 'My connection'.
 4. Fill in the Host of your GlobalLink NOW instance.
-5. 4. Fill in the Api key to your GlobalLink NOW instance..
+5. Fill in the Api key to your GlobalLink NOW instance..
 6. Click _Connect_.
 
 ![Adding a connection](image/README/GLN_AddConnection.png)
